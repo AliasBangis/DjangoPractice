@@ -1,0 +1,15 @@
+{% extends "proj/base.html" %}
+{% block content %}
+    {% for reserve in reserve %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ reserve.author }}</a>
+              <small class="text-muted">{{ reserve.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ reserve.title }}</a></h2>
+            <p class="article-content">{{ reserve.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
