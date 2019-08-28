@@ -12,8 +12,8 @@ posts = [
 
 reserve = [
     {
-        'author': 'Reservation of cpestudents',
-        'title': 'wala pang content pano gagawin to lol',
+        'author': 'Ronald Langaoan',
+        'title': 'ICpEP Project',
         'content': 'First Post Content',
         'date_posted': 'August 21, 2019'
     }

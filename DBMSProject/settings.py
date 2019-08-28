@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'proj.apps.ProjConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
-    'django_mysql',
 ]
 
 MIDDLEWARE = [
@@ -77,25 +76,10 @@ WSGI_APPLICATION = 'DBMSProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-#ronald updated 8/27/19 1:00AM
-DATABASES = { 
+DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'USER':'root', #your mysql username & password
-        'PASSWORD':'',
-        'NAME':'icpepdatabase',#databasename
-        'HOST':'localhost',
-        'PORT':'3306',
-        'OPTIONS' : { #following are required changes
-            'init_command':"SET sql_mode = 'STRICT_TRANS_TABLES'",
-            # Tell icpepdatabase to connect with 'utf8mb4' character set
-            'charset':'utf8mb4',
-        },
-        #tell django to build the test database with the 'utf8mb4' character set
-        'icpepdatabase':{
-            'CHARSET': 'utf8mb4',
-            'COLLATION':'utf8mb4_unicode_ci',
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
